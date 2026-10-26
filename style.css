@@ -1,0 +1,317 @@
+:root {
+--background: #0b1020;
+--surface: #141c30;
+--border: #26334d;
+--text: #edf3ff;
+--muted: #9aaac5;
+--accent: #5eead4;
+}
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+background: var(--background);
+color: var(--text);
+font-family: Arial, sans-serif;
+line-height: 1.6;
+}
+
+.topbar {
+min-height: 76px;
+padding: 18px 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: var(--surface);
+border-bottom: 1px solid var(--border);
+}
+
+.topbar h1 {
+margin: 0;
+font-size: 25px;
+}
+
+.status {
+color: var(--accent);
+font-size: 14px;
+}
+
+.layout {
+display: grid;
+grid-template-columns: 230px minmax(0, 1fr);
+min-height: calc(100vh - 76px);
+}
+
+.sidebar {
+padding: 25px 16px;
+background: #0e1628;
+border-right: 1px solid var(--border);
+}
+
+.sidebar h3 {
+color: var(--muted);
+font-size: 12px;
+letter-spacing: 2px;
+}
+
+.sidebar a {
+display: block;
+padding: 12px;
+margin: 8px 0;
+border-radius: 8px;
+color: var(--muted);
+text-decoration: none;
+}
+
+.sidebar a:hover {
+background: var(--surface);
+color: var(--accent);
+}
+
+.content {
+width: 100%;
+max-width: 1450px;
+padding: 35px;
+margin: 0 auto;
+}
+
+.eyebrow {
+color: var(--accent);
+font-size: 12px;
+font-weight: bold;
+letter-spacing: 2px;
+}
+
+h2 {
+margin-bottom: 8px;
+font-size: 26px;
+}
+
+.subtitle,
+.panel > p {
+color: var(--muted);
+}
+
+.stats {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 18px;
+margin: 28px 0 40px;
+}
+
+.card,
+.panel {
+padding: 22px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 14px;
+}
+
+.card p,
+.card span {
+color: var(--muted);
+}
+
+.card h3 {
+margin: 8px 0;
+font-size: 29px;
+}
+
+.progress-track {
+height: 8px;
+margin-top: 15px;
+overflow: hidden;
+background: #29364d;
+border-radius: 10px;
+}
+
+#progress-bar {
+width: 0;
+height: 100%;
+background: var(--accent);
+transition: width 0.3s ease;
+}
+
+.panel {
+margin: 30px 0 40px;
+}
+
+label {
+display: block;
+margin: 18px 0 8px;
+}
+
+input {
+width: 100%;
+padding: 13px;
+background: #0b1020;
+border: 1px solid var(--border);
+border-radius: 8px;
+color: white;
+font-size: 16px;
+}
+
+button {
+padding: 11px 16px;
+margin-top: 14px;
+background: var(--accent);
+color: #07141a;
+border: none;
+border-radius: 8px;
+font-weight: bold;
+cursor: pointer;
+}
+
+button:hover {
+opacity: 0.85;
+}
+
+#password-result {
+margin-top: 12px;
+font-weight: bold;
+}
+
+.privacy-note {
+font-size: 12px;
+}
+
+.learning-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 18px;
+margin: 25px 0 40px;
+}
+
+.lesson {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.lesson h3 {
+font-size: 18px;
+}
+
+.lesson p {
+flex-grow: 1;
+}
+
+.lesson a {
+color: var(--accent);
+text-decoration: none;
+}
+
+.lesson button {
+margin-top: 18px;
+}
+
+.lesson button.completed {
+background: #244c47;
+color: #d6fff6;
+}
+
+.table-wrapper {
+overflow-x: auto;
+}
+
+table {
+width: 100%;
+margin-top: 20px;
+border-collapse: collapse;
+text-align: left;
+}
+
+th,
+td {
+padding: 14px;
+border-bottom: 1px solid var(--border);
+}
+
+th {
+color: var(--accent);
+}
+
+footer {
+padding: 25px 0;
+color: var(--muted);
+text-align: center;
+}
+
+@media (max-width: 1000px) {
+.learning-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+
+@media (max-width: 700px) {
+.layout {
+grid-template-columns: 1fr;
+}
+
+```
+.sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+}
+
+.sidebar h3 {
+    width: 100%;
+}
+
+.content {
+    padding: 20px;
+}
+
+.stats,
+.learning-grid {
+    grid-template-columns: 1fr;
+}
+
+.topbar h1 {
+    font-size: 20px;
+}
+```
+
+}
+.quiz-question {
+border: 1px solid #39445a;
+border-radius: 10px;
+padding: 16px;
+margin: 18px 0;
+}
+
+.quiz-question legend {
+font-weight: bold;
+padding: 0 6px;
+}
+
+.quiz-question label {
+display: block;
+margin: 12px 0;
+cursor: pointer;
+}
+
+.quiz-question input[type="radio"] {
+margin-right: 8px;
+accent-color: #60a5fa;
+}
+
+.secondary-button {
+margin-left: 8px;
+}
+
+#quiz-result {
+margin-top: 18px;
+font-weight: bold;
+line-height: 1.6;
+}
